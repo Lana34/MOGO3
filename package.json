@@ -1,0 +1,18 @@
+{
+  "name": "mogo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.4.1",
+    "reset.css": "^2.0.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.29.3"
+  }
+}
