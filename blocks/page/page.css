@@ -32,3 +32,20 @@ margin-bottom: 0px;
         margin-bottom: 70px;
     }
 }
+@media (max-width:320px) {
+    .page__number{
+        margin: 29px 0px 29px;
+    } 
+    .page__number_background{
+margin-bottom: 0px;
+    }
+    .page__design{
+        margin-bottom: 52px;
+    }
+    .page__statement{
+    margin: 35px 0px;
+    }
+    .page__service{
+    margin: 10px 0px 60px;
+    }
+}

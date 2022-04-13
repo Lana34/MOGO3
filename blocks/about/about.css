@@ -119,3 +119,26 @@ background: #F38281;
         }
     
     }
+    @media (max-width: 320px) {
+        .about__teamDisr{
+            bottom: 0px;
+            right: 0px;
+            height: 32%;
+            display: block;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            font-size: 18px;
+            line-height: 21px;
+        }  
+        .about__teamDisr_row{
+            gap: 0px;
+            background: transparent;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        .about__text{
+            padding-bottom: 20px;
+        }
+    }

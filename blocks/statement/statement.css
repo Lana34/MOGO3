@@ -5,6 +5,7 @@
   .statement__content{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     padding: 40px 0px;
@@ -35,7 +36,7 @@
     top: 50%;
     left: 0px;
   }
-  .statment__arrow,
+  .statement__arrow,
   .statement__block {
     padding-right: 30px;
   }
@@ -48,5 +49,24 @@
       font-size: 24px;
 line-height: 35px;
     }
+}
+
+@media (max-width: 320px){
+.statement__arrow, .statement__icon, .statement__imgJames{
+  display: none;
+}
+.statement__block{
+  padding: 29px 16px;
+}
+.statement__content{
+  padding: 0px;
+}
+.statement__sign::before {
+  width: 47px;
+  height: 4px;
+}
+.statement__sign{
+  padding: 18px 0px 0px 90px;
+}
 }
   

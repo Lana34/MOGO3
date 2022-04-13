@@ -26,38 +26,62 @@
         <source srcset="./blocks/header/MoGo.png?as=jpeg&width=97" type="image/jpeg" />
         <img class="header__logo" src="./blocks/header/MoGo.png?width=97" alt="logo"> 
       </picture>
-    <div class="header__menu">
+      <button  class="menu__button menu__button_open" type="button" aria-expanded="false" aria-controls="header__menu" >
+      <svg class="menu__iconMenu" aria-hidden="true" width="24" height="18" viewBox="0 0 24 18"  fill="none"  xmlns="http://www.w3.org/2000/svg" >
+        <path d="M0 0H24V3H0V0ZM0 7.5H24V10.5H0V7.5ZM0 15H24V18H0V15Z" fill="white" />
+      </svg>
+      <svg class="menu__iconCross"aria-hidden="true" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <path
+          d="M0.454102 17.9248L8.93938 9.43952L17.4247 0.954242L19.546 3.07556L2.57542 20.0461L0.454102 17.9248Z" fill="white" />
+        <path d="M2.57544 0.954102L11.0607 9.43938L19.546 17.9247L17.4247 20.046L0.454119 3.07542L2.57544 0.954102Z" fill="white"/>
+      </svg>
+    </button>
+    <div class="header__menu header__menu_open" id="header__menu">
     <a class="header__link header__link_underline" href="#">About</a>
     <a class="header__link" href="#">Service</a>
     <a class="header__link" href="#">Work</a>
     <a class="header__link" href="#">Blog</a>
     <a class="header__link" href="#">Contact</a>
-    <a class="header__link" href="#"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a class="header__link header__link_hidden" href="#"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.39 15.3101H12.2C12.0674 15.3101 11.9402 15.2574 11.8465 15.1636C11.7527 15.0698 11.7 14.9427 11.7 14.8101C11.7 14.6775 11.7527 14.5503 11.8465 14.4565C11.9402 14.3627 12.0674 14.3101 12.2 14.3101H16.39C16.5226 14.3101 16.6498 14.3627 16.7436 14.4565C16.8373 14.5503 16.89 14.6775 16.89 14.8101C16.89 14.9427 16.8373 15.0698 16.7436 15.1636C16.6498 15.2574 16.5226 15.3101 16.39 15.3101Z" fill="white"/>
         <path d="M19.21 15.0001C19.1508 15.0142 19.0892 15.0142 19.03 15.0001C18.9684 14.9779 18.9118 14.9436 18.8637 14.8992C18.8156 14.8547 18.7768 14.8011 18.7498 14.7414C18.7228 14.6817 18.708 14.6172 18.7063 14.5518C18.7046 14.4863 18.7161 14.4211 18.74 14.3601L21.12 8.00014C21.1671 7.87735 21.2607 7.77805 21.3805 7.72377C21.5003 7.66949 21.6366 7.66459 21.76 7.71014C21.8837 7.75945 21.9838 7.85436 22.0397 7.9753C22.0955 8.09624 22.1027 8.23399 22.06 8.36014L19.68 14.6901C19.6397 14.7815 19.5739 14.8593 19.4906 14.9143C19.4072 14.9692 19.3098 14.999 19.21 15.0001Z" fill="white"/>
         <path d="M9.00001 15.1901C8.89568 15.1908 8.79383 15.1582 8.7093 15.0971C8.62476 15.0359 8.56195 14.9494 8.53001 14.8501L5.39001 5.31006H2.39001C2.25741 5.31006 2.13023 5.25738 2.03646 5.16361C1.94269 5.06984 1.89001 4.94267 1.89001 4.81006C1.89257 4.67825 1.94608 4.55256 2.03929 4.45934C2.13251 4.36612 2.25821 4.31262 2.39001 4.31006H5.75001C5.85362 4.31227 5.9541 4.34599 6.03806 4.40673C6.12203 4.46747 6.18549 4.55235 6.22001 4.65006L9.51002 14.5301C9.53193 14.5917 9.54127 14.6572 9.53748 14.7225C9.53369 14.7878 9.51685 14.8518 9.48796 14.9105C9.45906 14.9692 9.4187 15.0215 9.36924 15.0644C9.31979 15.1073 9.26225 15.1398 9.20001 15.1601C9.13649 15.1851 9.06809 15.1954 9.00001 15.1901Z" fill="white"/>
         <path d="M10.54 19.6899C9.9467 19.6899 9.36668 19.514 8.87333 19.1844C8.37998 18.8547 7.99546 18.3862 7.7684 17.838C7.54134 17.2898 7.48193 16.6866 7.59768 16.1047C7.71344 15.5227 7.99916 14.9882 8.41872 14.5686C8.83828 14.1491 9.37283 13.8633 9.95477 13.7476C10.5367 13.6318 11.1399 13.6912 11.6881 13.9183C12.2363 14.1454 12.7048 14.5299 13.0344 15.0232C13.3641 15.5166 13.54 16.0966 13.54 16.6899C13.54 17.4856 13.224 18.2487 12.6614 18.8113C12.0988 19.3739 11.3357 19.6899 10.54 19.6899ZM10.54 14.6899C10.1445 14.6899 9.7578 14.8072 9.4289 15.027C9.1 15.2468 8.84366 15.5591 8.69228 15.9246C8.54091 16.29 8.5013 16.6922 8.57847 17.0801C8.65564 17.4681 8.84612 17.8245 9.12583 18.1042C9.40553 18.3839 9.7619 18.5743 10.1499 18.6515C10.5378 18.7287 10.94 18.6891 11.3054 18.5377C11.6709 18.3863 11.9832 18.13 12.203 17.8011C12.4227 17.4722 12.54 17.0855 12.54 16.6899C12.54 16.1595 12.3293 15.6508 11.9543 15.2757C11.5792 14.9007 11.0705 14.6899 10.54 14.6899Z" fill="white"/>
         <path d="M18.05 19.6899C17.4566 19.6899 16.8766 19.514 16.3833 19.1844C15.8899 18.8547 15.5054 18.3862 15.2784 17.838C15.0513 17.2898 14.9919 16.6866 15.1076 16.1047C15.2234 15.5227 15.5091 14.9882 15.9287 14.5686C16.3482 14.1491 16.8828 13.8633 17.4647 13.7476C18.0467 13.6318 18.6499 13.6912 19.198 13.9183C19.7462 14.1454 20.2148 14.5299 20.5444 15.0232C20.874 15.5166 21.05 16.0966 21.05 16.6899C21.05 17.4856 20.7339 18.2487 20.1713 18.8113C19.6087 19.3739 18.8456 19.6899 18.05 19.6899ZM18.05 14.6899C17.6544 14.6899 17.2677 14.8072 16.9388 15.027C16.61 15.2468 16.3536 15.5591 16.2022 15.9246C16.0509 16.29 16.0112 16.6922 16.0884 17.0801C16.1656 17.4681 16.3561 17.8245 16.6358 18.1042C16.9155 18.3839 17.2718 18.5743 17.6598 18.6515C18.0478 18.7287 18.4499 18.6891 18.8154 18.5377C19.1808 18.3863 19.4932 18.13 19.7129 17.8011C19.9327 17.4722 20.05 17.0855 20.05 16.6899C20.05 16.1595 19.8393 15.6508 19.4642 15.2757C19.0891 14.9007 18.5804 14.6899 18.05 14.6899Z" fill="white"/>
         </svg></a>
-    <a class="header__link" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a class="header__link header__link_hidden" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.74998 17C8.31521 17 6.91271 16.5743 5.72002 15.7768C4.52733 14.9792 3.5981 13.8457 3.04996 12.5198C2.50181 11.1939 2.35941 9.73513 2.64078 8.32823C2.92215 6.92132 3.61463 5.62953 4.63056 4.6164C5.6465 3.60327 6.94019 2.91436 8.34787 2.63688C9.75555 2.3594 11.2139 2.50583 12.5383 3.05763C13.8627 3.60944 14.9936 4.5418 15.7879 5.73668C16.5821 6.93157 17.0039 8.33524 17 9.77C16.992 11.6885 16.225 13.5259 14.8665 14.8807C13.508 16.2354 11.6685 16.9974 9.74998 17ZM9.74998 3.5C8.5147 3.50001 7.30712 3.86607 6.27975 4.55195C5.25238 5.23782 4.4513 6.21276 3.97767 7.35364C3.50404 8.49451 3.3791 9.75015 3.61864 10.962C3.85819 12.1738 4.45146 13.2875 5.32354 14.1624C6.19561 15.0372 7.30739 15.6341 8.51845 15.8775C9.72951 16.1209 10.9855 16 12.1279 15.53C13.2703 15.06 14.2478 14.262 14.937 13.2369C15.6261 12.2117 15.996 11.0053 16 9.77C16 8.1124 15.3415 6.52269 14.1694 5.35059C12.9973 4.17848 11.4076 3.52 9.74998 3.52V3.5Z" fill="white"/>
         <path d="M21 21.5199C20.9344 21.5207 20.8694 21.5078 20.8091 21.4819C20.7488 21.4561 20.6946 21.4179 20.65 21.3699L14.17 14.8899C14.0772 14.7971 14.025 14.6712 14.025 14.5399C14.025 14.4086 14.0772 14.2827 14.17 14.1899C14.2628 14.0971 14.3887 14.0449 14.52 14.0449C14.6513 14.0449 14.7772 14.0971 14.87 14.1899L21.35 20.6699C21.3978 20.7148 21.436 20.769 21.462 20.8292C21.4881 20.8894 21.5015 20.9543 21.5015 21.0199C21.5015 21.0855 21.4881 21.1504 21.462 21.2106C21.436 21.2708 21.3978 21.325 21.35 21.3699C21.3054 21.4179 21.2511 21.4561 21.1909 21.4819C21.1306 21.5078 21.0656 21.5207 21 21.5199Z" fill="white"/>
         </svg></a>
         </div>
     </div>
 </header>
+<script>
+  (() => {
+    const menuButton = document.querySelector(".menu__button");
+    const headerMenu = document.querySelector(".header__menu");
+
+    menuButton.addEventListener("click", () => {
+      let expanded =
+      menuButton.getAttribute("aria-expanded") === "true" || false;
+      menuButton.setAttribute("aria-expanded", !expanded);
+      menuButton.classList.toggle("menu__button_open");
+      headerMenu.classList.toggle("header__menu_open");
+    });
+  })();
+</script>
   <div class="intro">
     <picture>
-      <source srcset="./blocks/intro/background.png?as=avif&width=320" type="image/avif" media="(max-width: 320px)" />
-      <source srcset="./blocks/intro/background.png?as=webp&width=320" type="image/webp" media="(max-width: 320px)" />
-      <source srcset="./blocks/intro/background.png?as=jpeg&width=320" type="image/jpeg" media="(max-width: 320px)"/> 
+      <source srcset="./blocks/intro/background.png?as=avif&width=320&height=635" type="image/avif" media="(max-width: 320px)" />
+      <source srcset="./blocks/intro/background.png?as=webp&width=320height=635" type="image/webp" media="(max-width: 320px)" />
+      <source srcset="./blocks/intro/background.png?as=jpeg&width=320height=635" type="image/jpeg" media="(max-width: 320px)"/> 
       <source srcset="./blocks/intro/background.png?as=avif&width=1010" type="image/avif" media="(max-width: 1024px)" />
       <source srcset="./blocks/intro/background.png?as=webp&width=1010" type="image/webp" media="(max-width: 1024px)" />
       <source srcset="./blocks/intro/background.png?as=jpeg&width=1010" type="image/jpeg" media="(max-width: 1024px)"/>
       <source srcset="./blocks/intro/background.png?as=avif&width=1480" type="image/avif" />
       <source srcset="./blocks/intro/background.png?as=webp&width=1480" type="image/webp"/>
       <source srcset="./blocks/intro/background.png?as=jpeg&width=1480" type="image/jpeg" /> 
-      <img  class="intro__background" src="./blocks/intro/background.png?width=1480" alt="background"/> 
+      <img  class="intro__background" src="./blocks/intro/background.png" alt="background"/> 
     </picture>
     <div class="intro__container container">
       <div class="intro__inner">
@@ -264,9 +288,9 @@
     <div class="page__design">
     <div class="design">
       <picture>
-        <source srcset="./blocks/design/design.png?as=avif&width=320" type="image/avif" media="(max-width: 320px)" />
-        <source srcset="./blocks/design/design.png?as=webp&width=320" type="image/webp" media="(max-width: 320px)" />
-        <source srcset="./blocks/design/design.png?as=jpeg&width=320" type="image/jpeg" media="(max-width: 320px)"/> 
+        <source srcset="./blocks/design/design.png?as=avif&width=320&height=514px" type="image/avif" media="(max-width: 320px)" />
+        <source srcset="./blocks/design/design.png?as=webp&width=320&height=514px" type="image/webp" media="(max-width: 320px)" />
+        <source srcset="./blocks/design/design.png?as=jpeg&width=320&height=514px" type="image/jpeg" media="(max-width: 320px)"/> 
         <source srcset="./blocks/design/design.png?as=avif&width=1010" type="image/avif" media="(max-width: 1024px)" />
         <source srcset="./blocks/design/design.png?as=webp&width=1010" type="image/webp" media="(max-width: 1024px)" />
         <source srcset="./blocks/design/design.png?as=jpeg&width=1010" type="image/jpeg" media="(max-width: 1024px)"/>
@@ -278,7 +302,7 @@
       <div class="design__container container">
       <div class="design__title title">
           <h2 class="title__item">For all  devices</h2>
-          <h1 class="title__main">unique design</h1>
+          <h1 class="title__main title__main_size">unique design</h1>
       </div>
       <picture>
         <source srcset="./blocks/design/tablet.png?as=avif&width=286" type="image/avif" media="(max-width: 320px)" />
@@ -432,10 +456,10 @@
       <div class="statement statement_color_grey">
         <div class="container">
           <div class="statement__content">
-          <svg class="statment__arrow"  width="30px" height="16px" viewBox="0 0 19 31" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <svg class="statement__arrow"  width="30px" height="16px" viewBox="0 0 19 31" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <line y1="-1" x2="22.2282" y2="-1" transform="matrix(-0.734803 -0.67828 -0.782424 0.622746 17 31)" stroke="#C6CBCD" stroke-width="2" />
             <line  y1="-1"  x2="22.2282"  y2="-1"  transform="matrix(-0.734803 0.67828 -0.782424 -0.622746 17 0.846191)"  stroke="#C6CBCD" stroke-width="2" /></svg>
-          <svg  width="170"  height="170"  viewBox="0 0 170 170" fill="none"  xmlns="http://www.w3.org/2000/svg" >
+          <svg  class="statement__icon" width="170"  height="170"  viewBox="0 0 170 170" fill="none"  xmlns="http://www.w3.org/2000/svg" >
             <rect  x="1"  y="1" width="168" height="168" stroke="#95E1D3" stroke-width="2"/>
             <path d="M89.4999 119.333C83.8306 119.338 78.2432 117.981 73.2083 115.375C72.9648 115.249 72.7484 115.077 72.5717 114.867C72.3949 114.658 72.261 114.416 72.1779 114.154C72.0947 113.893 72.0637 113.618 72.0868 113.345C72.1099 113.072 72.1866 112.806 72.3124 112.563C72.4383 112.319 72.6109 112.103 72.8203 111.926C73.0298 111.749 73.272 111.615 73.5331 111.532C73.7943 111.449 74.0693 111.418 74.3424 111.441C74.6155 111.464 74.8814 111.541 75.1249 111.667C81.8687 115.098 89.6261 115.972 96.9645 114.129C104.303 112.286 110.727 107.85 115.049 101.64C119.372 95.4303 121.301 87.866 120.481 80.3443C119.661 72.8226 116.148 65.8516 110.588 60.7187C105.029 55.5859 97.8009 52.638 90.2378 52.4194C82.6747 52.2008 75.2879 54.7263 69.4417 59.5295C63.5955 64.3326 59.6848 71.089 58.4318 78.5508C57.1788 86.0126 58.6682 93.6758 62.6249 100.125C62.904 100.602 62.9862 101.169 62.8539 101.706C62.7217 102.243 62.3854 102.707 61.9166 103C61.6817 103.144 61.4206 103.239 61.1485 103.281C60.8765 103.324 60.5987 103.311 60.3314 103.246C60.064 103.18 59.8124 103.061 59.591 102.898C59.3696 102.734 59.1829 102.528 59.0416 102.292C54.4691 94.9695 52.7284 86.2294 54.1466 77.7141C55.5648 69.1987 60.0442 61.4946 66.743 56.0495C73.4418 50.6045 81.8987 47.7936 90.5242 48.1451C99.1496 48.4966 107.35 51.9864 113.583 57.9584C118.397 62.4203 121.876 68.1321 123.633 74.4565C125.389 80.7808 125.354 87.4688 123.53 93.7741C121.706 100.079 118.166 105.754 113.305 110.164C108.444 114.574 102.452 117.547 95.9999 118.75C93.8565 119.149 91.6801 119.344 89.4999 119.333V119.333Z" fill="#95E1D3"/>
             <path  d="M57.1667 121.5C56.359 121.485 55.5675 121.271 54.8622 120.877C54.1569 120.483 53.5595 119.921 53.1228 119.242C52.6862 118.562 52.4238 117.785 52.3587 116.98C52.2937 116.175 52.4281 115.366 52.75 114.625L59.0833 100.375C59.3191 99.8701 59.7438 99.4779 60.266 99.283C60.7882 99.0882 61.366 99.1063 61.875 99.3334C62.3771 99.5608 62.7686 99.9779 62.9638 100.493C63.1591 101.009 63.1421 101.581 62.9167 102.083L56.5417 116.333C56.4605 116.442 56.4167 116.573 56.4167 116.708C56.4167 116.844 56.4605 116.975 56.5417 117.083C56.6327 117.188 56.7522 117.263 56.8855 117.3C57.0188 117.337 57.16 117.334 57.2917 117.292L73.3333 111.583C73.59 111.485 73.8641 111.439 74.139 111.449C74.4138 111.458 74.6839 111.524 74.933 111.64C75.182 111.757 75.4049 111.923 75.5883 112.128C75.7716 112.333 75.9117 112.573 76 112.833C76.1876 113.353 76.1614 113.925 75.927 114.426C75.6926 114.926 75.2692 115.312 74.75 115.5L58.8333 121.208C58.3002 121.406 57.7353 121.505 57.1667 121.5Z" fill="#95E1D3" />
@@ -449,7 +473,7 @@
             </p>
             <p class="statement__sign">Jon Doe</p>
           </div>
-          <svg class="statment__arrow" width="30px" height="16px" viewBox="0 0 19 31"  fill="none"xmlns="http://www.w3.org/2000/svg">
+          <svg class="statement__arrow" width="30px" height="16px" viewBox="0 0 19 31"  fill="none"xmlns="http://www.w3.org/2000/svg">
             <line y1="-1" x2="22.2282"   y2="-1" transform="matrix(0.734803 -0.67828 0.782424 0.622746 2 31)" stroke="#C6CBCD"  stroke-width="2" />
             <line y1="-1" x2="22.2282" y2="-1" transform="matrix(0.734803 0.67828 0.782424 -0.622746 2 0.846191)"  stroke="#C6CBCD"  stroke-width="2" />
           </svg>
@@ -772,9 +796,9 @@
     </div>
     <div class="works__img3">
       <picture>
-        <source srcset="./blocks/works/img3.png?as=avif&width=159" type="image/avif" media="(max-width: 320px)" />
-        <source srcset="./blocks/works/img3.png?as=webp&width=159" type="image/webp" media="(max-width: 320px)" />
-        <source srcset="./blocks/works/img3.png?as=jpeg&width=159" type="image/jpeg" media="(max-width: 320px)"/> 
+        <source srcset="./blocks/works/img3.png?as=avif&width=159&height=481" type="image/avif" media="(max-width: 320px)" />
+        <source srcset="./blocks/works/img3.png?as=webp&width=159&height=481" type="image/webp" media="(max-width: 320px)" />
+        <source srcset="./blocks/works/img3.png?as=jpeg&width=159&height=481" type="image/jpeg" media="(max-width: 320px)"/> 
         <source srcset="./blocks/works/img3.png?as=avif&width=255" type="image/avif" media="(max-width: 1024px)" />
         <source srcset="./blocks/works/img3.png?as=webp&width=255" type="image/webp" media="(max-width: 1024px)" />
         <source srcset="./blocks/works/img3.png?as=jpeg&width=255" type="image/jpeg" media="(max-width: 1024px)"/>
@@ -839,11 +863,11 @@
             <p class="works__discriptionText works__discriptionText_light">Lorem ipsum dolor sit</p>
             </div>
     </div>
-    <div class="works__img">
+    <div class="works__img works__img_6">
       <picture>
-        <source srcset="./blocks/works/img6.png?as=avif&width=159" type="image/avif" media="(max-width: 320px)" />
-        <source srcset="./blocks/works/img6.png?as=webp&width=159" type="image/webp" media="(max-width: 320px)" />
-        <source srcset="./blocks/works/img6.png?as=jpeg&width=159" type="image/jpeg" media="(max-width: 320px)"/> 
+        <source srcset="./blocks/works/img6.png?as=avif&width=319" type="image/avif" media="(max-width: 320px)" />
+        <source srcset="./blocks/works/img6.png?as=webp&width=319" type="image/webp" media="(max-width: 320px)" />
+        <source srcset="./blocks/works/img6.png?as=jpeg&width=319" type="image/jpeg" media="(max-width: 320px)"/> 
         <source srcset="./blocks/works/img6.png?as=avif&width=255" type="image/avif" media="(max-width: 1024px)" />
         <source srcset="./blocks/works/img6.png?as=webp&width=255" type="image/webp" media="(max-width: 1024px)" />
         <source srcset="./blocks/works/img6.png?as=jpeg&width=255" type="image/jpeg" media="(max-width: 1024px)"/>
@@ -891,7 +915,7 @@
 <div class="statement">
   <div class="container">
   <div class="statement__content">
-    <svg class="statment__arrow"  width="30px" height="16px" viewBox="0 0 19 31" fill="none" xmlns="http://www.w3.org/2000/svg" >
+    <svg class="statement__arrow"  width="30px" height="16px" viewBox="0 0 19 31" fill="none" xmlns="http://www.w3.org/2000/svg" >
       <line y1="-1" x2="22.2282" y2="-1" transform="matrix(-0.734803 -0.67828 -0.782424 0.622746 17 31)" stroke="#C6CBCD" stroke-width="2" />
       <line  y1="-1"  x2="22.2282"  y2="-1"  transform="matrix(-0.734803 0.67828 -0.782424 -0.622746 17 0.846191)"  stroke="#C6CBCD" stroke-width="2" /></svg>
       <picture>
@@ -901,7 +925,7 @@
         <source srcset="./blocks/statement/James.png?as=avif&width=170" type="image/avif" />
         <source srcset="./blocks/statement/James.png?as=webp&width=170" type="image/webp"/>
         <source srcset="./blocks/statement/James.png?as=jpeg&width=170" type="image/jpeg" />
-        <img src="./blocks/statement/James.png?width=170" alt="James">
+        <img class="statement__imgJames" src="./blocks/statement/James.png?width=170" alt="James">
       </picture>
     <div class="statement__block">
       <p class="statement__text">
@@ -912,7 +936,7 @@
       </p>
       <p class="statement__sign">James Philips</p>
     </div>
-    <svg class="statment__arrow" width="30px" height="16px" viewBox="0 0 19 31"  fill="none"xmlns="http://www.w3.org/2000/svg">
+    <svg class="statement__arrow" width="30px" height="16px" viewBox="0 0 19 31"  fill="none"xmlns="http://www.w3.org/2000/svg">
       <line y1="-1" x2="22.2282"   y2="-1" transform="matrix(0.734803 -0.67828 0.782424 0.622746 2 31)" stroke="#C6CBCD"  stroke-width="2" />
       <line y1="-1" x2="22.2282" y2="-1" transform="matrix(0.734803 0.67828 0.782424 -0.622746 2 0.846191)"  stroke="#C6CBCD"  stroke-width="2" />
     </svg>
@@ -923,12 +947,12 @@
 <div class="page__service page__service_grey">
   <div class="service service_grey">
     <picture>
-      <source srcset="./blocks/service/bg.png?as=avif&width=320" type="image/avif" media="(max-width: 320px)" />
-      <source srcset="./blocks/service/bg.png?as=webp&width=320" type="image/webp" media="(max-width: 320px)" />
-      <source srcset="./blocks/service/bg.png?as=jpeg&width=320" type="image/jpeg" media="(max-width: 320px)"/> 
-      <source srcset="./blocks/service/bg.png?as=avif&width=1010" type="image/avif" media="(max-width: 1024px)" />
-      <source srcset="./blocks/service/bg.png?as=webp&width=1010" type="image/webp" media="(max-width: 1024px)" />
-      <source srcset="./blocks/service/bg.png?as=jpeg&width=1010" type="image/jpeg" media="(max-width: 1024px)"/>
+      <source srcset="./blocks/service/bg.png?as=avif&width=320&height=1610" type="image/avif" media="(max-width: 320px)" />
+      <source srcset="./blocks/service/bg.png?as=webp&width=320&height=1610" type="image/webp" media="(max-width: 320px)" />
+      <source srcset="./blocks/service/bg.png?as=jpeg&width=320&height=1610" type="image/jpeg" media="(max-width: 320px)"/> 
+      <source srcset="./blocks/service/bg.png?as=avif&width=1010&height=625" type="image/avif" media="(max-width: 1024px)" />
+      <source srcset="./blocks/service/bg.png?as=webp&width=1010&height=625" type="image/webp" media="(max-width: 1024px)" />
+      <source srcset="./blocks/service/bg.png?as=jpeg&width=1010&height=625" type="image/jpeg" media="(max-width: 1024px)"/>
       <source srcset="./blocks/service/bg.png?as=avif&width=1480" type="image/avif" />
       <source srcset="./blocks/service/bg.png?as=webp&width=1480" type="image/webp"/>
       <source srcset="./blocks/service/bg.png?as=jpeg&width=1480" type="image/jpeg" />
@@ -1141,9 +1165,9 @@
 <div class="page__number page__number_background">
 <div class="number number_background ">
   <picture>
-    <source srcset="./blocks/number/bcg.png?as=avif&width=320" type="image/avif" media="(max-width: 320px)" />
-    <source srcset="./blocks/number/bcg.png?as=webp&width=320" type="image/webp" media="(max-width: 320px)" />
-    <source srcset="./blocks/number/bcg.png?as=jpeg&width=320" type="image/jpeg" media="(max-width: 320px)"/> 
+    <source srcset="./blocks/number/bcg.png?as=avif&width=320&height=231" type="image/avif" media="(max-width: 320px)" />
+    <source srcset="./blocks/number/bcg.png?as=webp&width=320&height=231" type="image/webp" media="(max-width: 320px)" />
+    <source srcset="./blocks/number/bcg.png?as=jpeg&width=320&height=231" type="image/jpeg" media="(max-width: 320px)"/> 
     <source srcset="./blocks/number/bcg.png?as=avif&width=1010" type="image/avif" media="(max-width: 1024px)" />
     <source srcset="./blocks/number/bcg.png?as=webp&width=1010" type="image/webp" media="(max-width: 1024px)" />
     <source srcset="./blocks/number/bcg.png?as=jpeg&width=1010" type="image/jpeg" media="(max-width: 1024px)"/>
@@ -1244,21 +1268,54 @@
   <div class="footer__blog">
       <h2 class="footer__blogItem">Blogs</h2>
       <div class="footer__articleBlock">
-        <img src="./blocks/footer/article1.png" alt="article">
+        <picture>
+          <source srcset="./blocks/footer/insta1.png?as=avif&width=83" type="image/avif" media="(max-width: 320px)" />
+          <source srcset="./blocks/footer/insta1.png?as=webp&width=83" type="image/webp" media="(max-width: 320px)" />
+          <source srcset="./blocks/footer/insta1.png?as=jpeg&width=83" type="image/jpeg" media="(max-width: 320px)"/> 
+          <source srcset="./blocks/footer/insta1.png?as=avif&width=115" type="image/avif" media="(max-width: 1024px)" />
+          <source srcset="./blocks/footer/insta1.png?as=webp&width=115" type="image/webp" media="(max-width: 1024px)" />
+          <source srcset="./blocks/footer/insta1.png?as=jpeg&width=115" type="image/jpeg" media="(max-width: 1024px)"/>
+          <source srcset="./blocks/footer/insta1.png?as=avif&width=170" type="image/avif" />
+          <source srcset="./blocks/footer/insta1.png?as=webp&width=170" type="image/webp"/>
+          <source srcset="./blocks/footer/insta1.png?as=jpeg&width=170" type="image/jpeg" />
+          <img src="./blocks/footer/article1.png?width=170" alt="article">
+        </picture>
         <div class="footer__articleDscr">
         <a class="footer__articleName" href="#">Lorem ipsum dolor sit<br> amet, consectetur<br> adipiscing elit.</a>
         <p class="footer__articleDate">jan.9.22.15</p>
     </div>
 </div>
       <div class="footer__articleBlock">
-        <img src="./blocks/footer/article2.png" alt="article">
+        <picture>
+          <source srcset="./blocks/footer/insta1.png?as=avif&width=83" type="image/avif" media="(max-width: 320px)" />
+          <source srcset="./blocks/footer/insta1.png?as=webp&width=83" type="image/webp" media="(max-width: 320px)" />
+          <source srcset="./blocks/footer/insta1.png?as=jpeg&width=83" type="image/jpeg" media="(max-width: 320px)"/> 
+          <source srcset="./blocks/footer/insta1.png?as=avif&width=115" type="image/avif" media="(max-width: 1024px)" />
+          <source srcset="./blocks/footer/insta1.png?as=webp&width=115" type="image/webp" media="(max-width: 1024px)" />
+          <source srcset="./blocks/footer/insta1.png?as=jpeg&width=115" type="image/jpeg" media="(max-width: 1024px)"/>
+          <source srcset="./blocks/footer/insta1.png?as=avif&width=170" type="image/avif" />
+          <source srcset="./blocks/footer/insta1.png?as=webp&width=170" type="image/webp"/>
+          <source srcset="./blocks/footer/insta1.png?as=jpeg&width=170" type="image/jpeg" />
+          <img src="./blocks/footer/article2.png?width=170" alt="article">
+        </picture>
         <div class="footer__articleDscr">
         <a class="footer__articleName" href="#">Lorem ipsum dolor sit<br> amet, consectetur<br> adipiscing elit.</a>
         <p class="footer__articleDate">jan.9.22.15</p>
     </div>
 </div>
     <div class="footer__articleBlock">
-        <img src="./blocks/footer/article3.png" alt="article">
+      <picture>
+        <source srcset="./blocks/footer/insta1.png?as=avif&width=83" type="image/avif" media="(max-width: 320px)" />
+        <source srcset="./blocks/footer/insta1.png?as=webp&width=83" type="image/webp" media="(max-width: 320px)" />
+        <source srcset="./blocks/footer/insta1.png?as=jpeg&width=83" type="image/jpeg" media="(max-width: 320px)"/> 
+        <source srcset="./blocks/footer/insta1.png?as=avif&width=115" type="image/avif" media="(max-width: 1024px)" />
+        <source srcset="./blocks/footer/insta1.png?as=webp&width=115" type="image/webp" media="(max-width: 1024px)" />
+        <source srcset="./blocks/footer/insta1.png?as=jpeg&width=115" type="image/jpeg" media="(max-width: 1024px)"/>
+        <source srcset="./blocks/footer/insta1.png?as=avif&width=170" type="image/avif" />
+        <source srcset="./blocks/footer/insta1.png?as=webp&width=170" type="image/webp"/>
+        <source srcset="./blocks/footer/insta1.png?as=jpeg&width=170" type="image/jpeg" />
+        <img src="./blocks/footer/article3.png?width=170" alt="article">
+      </picture>
         <div class="footer__articleDscr">
         <a class="footer__articleName" href="#">Lorem ipsum dolor sit<br> amet, consectetur<br> adipiscing elit.</a>
         <p class="footer__articleDate">jan.9.22.15</p>

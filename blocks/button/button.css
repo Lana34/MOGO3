@@ -27,3 +27,10 @@ background: #FFFFFF;
     
     }
 }
+@media (max-width: 320px){
+    .button{
+        padding: 15px 85px;
+        
+        }
+    }
+

@@ -20,8 +20,6 @@ position: relative;
     height: 100%;   
 }
 .design__title{
-width: 400px;
-margin: 0px auto;
 left: 0px;
 right: 0px;
 position: absolute;
@@ -50,5 +48,14 @@ right: 17%;
 @media(max-width:1024px){
     .design__mobile{
         right: 23%;
+    }   
+}
+@media(max-width:320px){
+    .design__tabletScreen{
+    border: 8px solid black;
+    bottom: 29px;
+    }
+    .design__mobile{
+        right: 10%;
     }   
 }

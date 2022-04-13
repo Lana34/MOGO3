@@ -40,3 +40,14 @@ text-align: center;
         }  
         
     }
+    @media (max-width: 320px){
+        .design__title{
+            padding-top: 45px;
+        }
+        .title__main_size{
+            font-size: 36px;
+            line-height: 42px;
+
+        }
+        
+    }

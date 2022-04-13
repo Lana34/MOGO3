@@ -5,6 +5,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     padding: 42px 0px;
   }
@@ -164,6 +165,17 @@ margin: 15px 0px 15px;
 }
 .footer__content{
   gap: 20px;
+}
+}
+@media (max-width:320px){
+.footer__follow{
+  text-align: center;
+}
+.footer__media{
+  gap: 8px;
+}
+.footer__mediaText{
+  padding-left: 5px;
 }
 }
   

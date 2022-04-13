@@ -9,6 +9,7 @@
   }
   .activity__content {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     gap: 30px;
@@ -16,10 +17,12 @@
   .activity__slideBlock {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex: 1;
     gap: 22px;
   }
   .activity__slide {
-    min-width: 570px;
+  width: 570px;
   }
   .activity__inputBlock {
     display: flex;
@@ -79,7 +82,7 @@
     line-height: 16px;
     }
     .activity__slide{
-     min-width: 486px; 
+     width: 486px; 
     }
     .activity__content{
       gap: 20px;
@@ -88,5 +91,14 @@
       font-size: 18px;
 line-height: 21px;
     }
+  }
+  @media (max-width:320px){
+    .activity__slide{
+      width: 288px; 
+     }
+    .activity__content{
+      gap: 20px;
+    }
+   
   }
   
